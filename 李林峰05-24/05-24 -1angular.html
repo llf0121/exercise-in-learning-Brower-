@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.min.js"></script>
+		<style>
+			li{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body  ng-app='app'   ng-controller='ctrl'>
+		<script type="text/javascript">
+//			创建模块儿
+		var app=angular.module('app',[]);
+//		创建控制器
+      app.controller('ctrl',['$scope',function($scope){
+      	
+      	$scope.list=[
+				      	{
+				      		title:'js好学嘛？',
+				      		type:'checkbox',
+				      		answer:[
+				      					{cont:'A 比较难'},
+				      					{cont:'B 难'},
+				      					{cont:'C 不难'},
+				      					{cont:'D 非常简单'}
+				      				],
+				      		isright:''
+				      	},
+				      	{
+				      		title:'angular是什么？',
+				      		type:'radio',
+				      		answer:[
+				      					{cont:'A js框架',
+				      					isright:'true'},
+				      					{cont:'B php框架',
+				      					isright:'true'},
+				      					{cont:'C css特性',
+				      					isright:'true'},
+				      					{cont:'D html5内容',
+				      					isright:'true'}
+				      				]
+				      	}
+      	]
+      	
+      	
+      	
+      	
+      }])
+		</script>
+		
+		
+		
+		<div ng-repeat='(k,v) in list'>
+			<h2> {{v.title}}</h2>
+			<ul>
+				<li  ng-repeat='(kk,vv) in v.answer'>
+					<input type="radio"  ng-if='v.type=="radio"' name='{{k}}'  ng-model='v.isright' ng-value='kk' />
+					<input type="checkbox"  ng-if='v.type=="checkbox"' name='{{k}}'  ng-model='vv.isright'   />
+					{{vv.cont}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

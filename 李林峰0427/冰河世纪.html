@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>冰河世纪</title>
+		<style>
+			input{
+				display: block;
+				margin: 100px auto;
+			}
+			img{
+				display: block;
+				margin: 200px auto;
+			}
+		</style>
+		<script>
+			//页面加载完后开始执行
+			window.onload=function(){
+			//声明一个数组，将动图要用的图片地址按顺序存入
+				 var add=['images/binghe/1.png','images/binghe/2.png','images/binghe/3.png','images/binghe/4.png',
+				 'images/binghe/5.png','images/binghe/6.png','images/binghe/7.png','images/binghe/8.png','images/binghe/9.png','images/binghe/10.png',
+				 'images/binghe/11.png','images/binghe/12.png','images/binghe/13.png','images/binghe/14.png','images/binghe/15.png','images/binghe/16.png',
+				 'images/binghe/17.png','images/binghe/18.png','images/binghe/19.png']
+				 
+				 //抓取元素
+				 var btn=document.getElementById('btn');
+				 var pic=document.getElementById('pic');
+			
+				  i=0;//设定一个变量,来输出图片地址 
+				  //给按钮设置单击事件
+				 btn.onclick=function(){
+					 //设定定时器，每隔一定时间，让图片自动更换src地址      
+				
+					 time=setInterval(function(){
+					 	 //判断图片是否为最后一张图片，如果是就跳到第一张
+					 	 if(i==18){
+					 	 	i=0;
+					 	 }
+					 	 //设定图片src属性
+					 	pic.setAttribute('src',add[i]);
+					 	i=i+1; 
+					 	console.log(i);
+					 },100)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button"  id="btn" value="开始"/>
+		<img  id="pic" src="images/binghe/1.png" alt="地址有误" />
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组排序</title>
+		<script>
+			
+			
+				function sort(arr){
+					for(j=0;j<arr.length;j++){
+						for(var i=0;i<arr.length;i++){
+							if(arr[i]>arr[i+1]){
+								var b=arr[i];
+								arr[i]=arr[i+1];
+								arr[i+1]=b;	
+							}
+						}
+					}
+					return arr;
+				}
+			var yuan=[25,26,23,32,14,56,78,42,44];
+			var s=sort(yuan);
+			document.write(s);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

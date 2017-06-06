@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#clock{
+				width: 500px;
+				height: 500px;
+				margin: 100px auto;
+				background: url(img/biaopan.png);
+				background-size: 500px 500px;
+				border: 1px solid red;
+				position: relative;
+			}
+			#clock img{
+				display: block;
+				width: 18px;
+				height: 240px;
+				position: absolute;
+				border: 1px solid blue;
+				left: 241px;
+				top: 208px;
+				animation: zhuan  60s linear infinite;
+				
+			}
+			@keyframes zhuan{
+				from{transform: rotate(0deg);
+					transform-origin:9px 40px ;
+					}
+				to{transform: rotate(360deg);
+				transform-origin:9px 40px ;}
+		</style>
+	</head>
+	<body>
+		
+		<div id='clock'>
+			<img src="img/zhizhen.png" alt="" />
+		</div>
+	</body>
+</html>

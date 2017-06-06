@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重2</title>
+		<script>
+			
+			
+			function qcf(arr){
+				for (var i=0;i<arr.length;i++){
+					for(var j=i+1;j<arr.length;j++){
+						 if(arr[i]==arr[j]){
+						 	arr.splice(j,1);
+						 	j=j-1;
+						 };
+					};
+				};
+				return arr;
+			}
+			
+			var brr = ['a','b','c','a','d','e','a','a','a','a','d','e','a','b','c','a','c','f','d','a','c','c','c','c','g','h'];
+			var re=qcf(brr);
+			document.write(re);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝轮播</title>
+		<link rel="stylesheet" href="font/iconfont-1.css" />
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			background: none;
+		}
+		#lunbo {
+			width: 520px;
+			height:280px;
+			margin: 100px auto;
+			border: 1px solid red;
+			position: relative;
+			overflow: hidden;
+		}
+		#lunbo #box{
+			width:3640px ;
+			height: 280px;
+			position: absolute;
+			left:0px;
+			top: 0px;
+			float: left;
+			display: block;
+		}
+		#lunbo #box1{
+			width:2600px ;
+			height: 280px;
+			position: absolute;
+			left:0px;
+			top: 0px;
+			float: left;
+			display: none;
+		}
+		#lunbo #box img{
+			float: left;
+		}
+		#lunbo ul {
+			width: 66px;
+			height: 14px;
+			position: absolute;
+			bottom: 15px;
+			left:222px ;
+			background: rgba(104,104,108,0.5);
+			border-radius: 7px ;
+		}
+		#lunbo ul li{
+			list-style: none;
+			background: #B7B7B7;
+			width: 11px;
+			height:11px ;
+			float: left;
+			margin: 1px 1px;
+			border-radius: 5.5px;
+		}
+		#lunbo span{
+			background:rgba(135,126,147,0.6);
+			display: none;
+			width: 24px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+		}
+		#lunbo span.l{
+			position: absolute;
+			left:0px;
+			top:140px ;
+		} 
+		 #lunbo span i{
+		 	font-size: 14px;
+			color:white;
+		 }
+		#lunbo  span.r{
+			position: absolute;
+			right:0px;
+			top:140px;
+		}
+	</style>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+//			设置大总管变量
+			var c=1;
+			var i=0
+			
+			
+			function run(){
+//				让大总管变量自加
+				c++;
+				i++;
+				//判断c边界
+				if(c==6){
+					c=1;
+					$("#box").css({"left":"0px"});
+				};
+//				每隔一段时间让box向左移动,让c号图片显示
+				$("#lunbo #box").stop().animate({'left':c*-520+'px'},1000);
+				//让i号小圆点变色,让它的兄弟元素变灰
+				i=c==5?0:i;
+				$("#lunbo ul li").eq(i).css({"background":"#FF4400"}).siblings('li').css({"background":"#B7B7B7"});	
+			}
+//			设置定时器s
+		var timer=setInterval(run,4000);
+			
+			//给图片区加鼠标移入事件,移除事件
+			$("#lunbo").mouseenter(function(){
+				//让左右箭头颜色发生变化
+				$(this).find("span").css({'display':'block'});
+			}).mouseleave(function(){
+				$(this).find("span").css({'display':'none'});
+			})
+			
+			// 给左箭头绑定单击事件,,鼠标移动事件，鼠标移除事件
+
+			//设置状态变量
+			var konck=1;
+			   $("#lunbo  span.l").click(function(){
+			   	if(konck==0){
+			   		return;
+			   	}
+			   			konck=0;
+					clearInterval(timer);
+					setTimeout(function(){
+						timer=setInterval(run,4000);
+						konck=1;
+					},1200)
+				   	c--;
+				   	i--;
+				   	if(c==-1){
+				   		c=4;
+				   		 $("#box").css({"left":"-2600px"});
+				   	}
+	
+				   	// 	让c号图片显示
+					$("#lunbo #box").stop().animate({'left':c*-520+'px'},1000);
+					//让i号小圆点变色,让它的兄弟元素变灰
+					if(c==5){
+						i=0;	
+					}
+					$("#lunbo ul li").eq(i).css({"background":"#FF4400"}).siblings('li').css({"background":"#B7B7B7"});
+			   }).mouseenter(function(){
+			   		$(this).css({'background':'rgba(0,0,0,0.4)','cursor':'pointer'}).find('i').css({'color':'white'});
+			   }).mouseleave(function(){
+			   		$(this).css({'background':'rgba(0,0,0,0)','cursor':'default'}).find('i').css({'color':' rgba(208,208,208,0.6)'});
+			   })
+			   
+			   // 给右箭头绑定单击事件,鼠标移动事件，鼠标移除事件
+			
+			   $("#lunbo  span.r").click(function(){
+			   		if(konck==0){
+			   		return;
+			   	}				
+						konck=0;
+					clearInterval(timer);
+					setTimeout(function(){
+						timer=setInterval(run,4000);
+						konck=1;
+					},1200)
+
+//			   	clearInterval(timer);
+				   	c++;
+				   	i++;
+				   	if(c==6){
+				   		c=1;
+				   		 $("#box").css({"left":"0px"});
+				   	}
+				   		// 	让c号图片显示
+					$("#lunbo #box").stop().animate({'left':c*-520+'px'},1000);
+					//让i号小圆点变色,让它的兄弟元素变灰
+					if(c==5){
+						i=0;
+					};
+					$("#lunbo ul li").eq(i).css({"background":"#FF4400"}).siblings('li').css({"background":"#B7B7B7"}); 
+			   }).mouseenter(function(){
+			   		$(this).css({'background':'rgba(0,0,0,0.4)','cursor':'pointer'}).find('i').css({'color':'white'});
+			   }).mouseleave(function(){
+			   		$(this).css({'background':'rgba(0,0,0,0)','cursor':'default'}).find('i').css({'color':' rgba(208,208,208,0.6)'});
+			   })	
+			   
+			   //给小圆点加单击事件
+			     $("#lunbo ul li").click(function(){
+//			     	获得当前单击得序号
+					var num=$(this).index();
+					c=num+1;
+					i=num;
+//					让c号图片显示,让c号小圆点变色
+					$("#lunbo #box").stop().animate({'left':c*-520+'px'},1000);
+					$("#lunbo ul li").eq(i).css({"background":"#FF4400"}).siblings('li').css({"background":"#B7B7B7"}); 
+			     })
+		})
+	</script>
+	<body>
+		<div id='lunbo'>
+			<div id='box'>
+				<img src="img/0.jpg"/>
+				<img src="img/1.jpg"/>
+				<img src="img/2.jpg"/>
+				<img src="img/3.jpg"/>
+				<img src="img/4.jpg"/>
+				<img src="img/5.jpg"/>
+			</div>
+			<ul>
+				<li style="background: #FF4400;"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span class="l"><i class="iconfont icon-iconfontjiantou3"></i></span>
+			<span class="r"><i class="iconfont icon-iconfontjiantou1"></i></span>
+		</div>
+	</body>
+</html>

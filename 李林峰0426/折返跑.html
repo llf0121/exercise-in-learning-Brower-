@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加速跑</title>
+		<script>
+			window.onload=function(){							//让页面加载完成后再执行脚本;
+					var a=5;									//设置每次前进或后退的距离；
+				 function foo(){								
+				 	
+				 	var btn=document.getElementById("btn");		//抓取元素 button;
+					var pic=document.getElementById("pic");		//抓取元素 pic;
+					var old=pic.style.right;					//将旧的right值赋给old;
+					var	ne=parseInt(old)+a;						//将旧的right值加a后赋给old;
+//					document.title=ne;				
+					 pic.style.right=ne+'px';					//将新的值赋给当前right值;
+					
+
+					if(ne==1000){								//判断，当小羊到达预定位置时，开始反向跑；
+						a=a*(-1);
+					};
+					if(ne==0){	
+						a=a*(-1);
+					};
+ 
+				 }
+
+				 btn.onclick=function(){						//设定onclick 事件；
+				
+				 	setInterval(foo,10);						//设置计时器；
+				 }
+
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn"  value="开始跑"/>
+		<img id="pic" src="img/u=2919045841,1965899781&fm=23&gp=0.jpg.gif"  style="position: absolute; right:5px;top: 200px;"/>
+		<img src="img/index.jpg"  style="position: absolute; right:1413px;top: 200px;" />
+	</body>

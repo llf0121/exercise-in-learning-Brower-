@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#pic {
+				margin: 0 auto;
+				display: block;
+				width: 500px;
+			}
+			
+			#box {
+				width: 500px;
+				height: 50px;
+				margin: 0 auto;
+			}
+			
+			#box input {
+				width: 150px;
+				height: 50px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="box">
+			<input type="button" value="开始抽奖" id="start" />
+			<input type="button" value="停止抽奖" id="end" />
+		</div>
+
+		<br /><br />
+
+		<img src="images/xiexiehuigu.jpg" id="pic" />
+
+
+<script type="text/javascript">
+	var picarr = ['images/angelababy.jpg', 'images/bujiadi.jpg', 'images/liudehua.jpg', 'images/liuyifei.jpg', 'images/meinv2.jpg', 'images/qian.jpg', 'images/quanzhilong.jpeg', 'images/xiexiehuigu.jpg', 'images/youting.jpg', 'images/zhishengji.jpg'];
+	
+	var start = document.getElementById("start");
+	var end = document.getElementById("end");
+	var pic = document.getElementById("pic");
+	
+//	给开始按钮加单击事件
+	start.onclick = function(){
+//		设置定时器,每隔一段时间随机一个路径设置给图片
+		timer = setInterval(function(){
+//			随机下标
+			var num = Math.floor(Math.random()*(picarr.length-1+1-0)+0);
+//			将随机下标对应的路径设置给图片
+			pic.setAttribute('src',picarr[num]);
+		},100)
+	}
+	
+//	停止抽奖
+	end.onclick = function(){
+//		清理定时器
+		clearInterval(timer);
+	}
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+
+	</body>
+
+</html>

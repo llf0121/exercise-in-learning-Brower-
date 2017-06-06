@@ -1,0 +1,26 @@
+  
+  <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组排序</title>
+		<script type="text/javascript">
+			
+			function Max(arr){
+				var max=arr[0];
+				for(var i=0;i<arr.length;i++){
+					if(arr[i]>=max){
+						max=arr[i];
+					};
+				}
+				return max;
+			}
+			var a=[12,35,45,22,70,10,5,67,49,125,74];
+
+			var result=Max(a);
+			document.write(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

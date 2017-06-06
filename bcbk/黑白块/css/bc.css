@@ -1,0 +1,32 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: white;
+}
+
+#box{
+	width: 100%;
+	height: 16rem;
+	margin: 2.666666rem  auto;
+}
+#box ul{
+	width: 9.92rem;
+	height:2.48rem;
+	display: flex;
+	margin: 0 auto;
+}
+#box li{
+	display: block;
+	float: left;
+	width: 6.666666rem;
+	height: 100%;
+	background:white;
+	border: 1px solid grey;
+	box-sizing: border-box;
+} 
+
+#box li.black{
+	background: black;
+}

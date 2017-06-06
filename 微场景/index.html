@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Swiper demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+
+		<!-- Demo styles -->
+		<style>
+			html,
+			body {
+				position: relative;
+				height: 100%;
+			}
+			
+			body {
+				background: #eee;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<audio src="audio/Jason Mraz - I'm Yours.mp3" hidden="hidden" autoplay="autoplay" id="au" loop="loop"></audio>
+				<img id="bofang" src="imgs/29.png"  />
+				<div class="swiper-slide one">
+					<img src="imgs/1.png " class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/>
+					<img src="imgs/2.png"  class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.8s"/>
+					<img src="imgs/3.png"  class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.6s" swiper-animate-delay="0s"/>
+					<p id="one" class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s">-Just for you</p>
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide two " >
+					<img src="imgs/4.png"  class="ani" swiper-animate-effect=" slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+					<img src="imgs/6.png" class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.6s"  />
+					<img src="imgs/5.png" class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.6s"  />
+					<img src="imgs/7.png" class="ani" swiper-animate-effect="  slideInLeft" swiper-animate-duration="1.6s" swiper-animate-delay="0s"  />
+					<p class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.6s" >Day</p>
+					<p class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.s" >365天</p>
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide three">
+					<img src="imgs/11.jpg" class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="3s" swiper-animate-delay="0.6s"/>
+					<img src="imgs/8.png"   class="ani" swiper-animate-effect=" bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"/>
+					<img src="imgs/9.png"  class="ani" swiper-animate-effect=" bounceInUp" swiper-animate-duration="2.4s" swiper-animate-delay="0.7s"/>
+					<img src="imgs/10.png" class="ani" swiper-animate-effect=" bounceInUp" swiper-animate-duration="2.4s" swiper-animate-delay="0.7s"/>
+					<p  class="ani" swiper-animate-effect=" bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">初次见面</p>
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide four">
+					<img src="imgs/14.png" />
+					<img src="imgs/11.png" />
+					<img src="imgs/12.png"  class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s" />
+					<img src="imgs/13.png"  class="ani" swiper-animate-effect=" bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.5s"s/>
+					<p  class="ani" swiper-animate-effect=" zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">第一次单独约会</p>
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide five">
+					<img src="imgs/14.png" />
+					<img src="imgs/18.png"  class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0s"/>
+					<img src="imgs/15.png"  class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="1.0s"/>
+					<img src="imgs/16.png" />
+					<img src="imgs/17.png"  class="ani" swiper-animate-effect=" fadeInUpBig" swiper-animate-duration="2s" swiper-animate-delay="0.6s"/>
+					<p class="ani" swiper-animate-effect="  fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0s">甜蜜告白</p>
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide six">
+					<img src="imgs/20.jpeg" />
+					<img src="imgs/24.jpg" />
+					<img src="imgs/21.jpg"  class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="2s" swiper-animate-delay="0s"/>
+					<img src="imgs/22.png" class="ani" swiper-animate-effect="shake" swiper-animate-duration="2s" swiper-animate-delay="1s"/>
+					<img src="imgs/23.png"  class="ani" swiper-animate-effect="  fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0s"/>
+					<img src="imgs/25.png"  />
+					<p class="love">情话七夕</p>
+				</div>
+				<div class="swiper-slide seven">
+					<img src="imgs/26.png"   class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="2s" swiper-animate-delay="0s" />
+					<img src="imgs/27.png"  class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s" />
+					<img src="imgs/28.png"  class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+					<p  class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="2s" swiper-animate-delay="0s">亲爱的</p>
+					<p class="love">情话七夕</p>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="js/swiper.min.js"></script>
+		<script src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				direction: 'vertical',
+				onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+					swiperAnimateCache(swiper); //隐藏动画元素 
+					swiperAnimate(swiper); //初始化完成开始动画
+				},
+				onSlideChangeEnd: function(swiper) {
+					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				}
+			});
+		</script>
+		<script>
+			//获得当前屏幕的宽高
+			var he=document.documentElement.clientHeight;
+			//给场景一的p标签设定圆角
+			document.getElementById("one").style.borderRadius=he*0.03+'px';	
+	
+	
+			//给音乐设置点击事件
+			
+//			给图片加单击事件
+//给播放设置状态属性
+			var sta=1;
+				$("#bofang").click(function(){
+//					点一下,停止播放，再点一下继续播放
+					if(sta==1){
+						sta=0;
+					$("#au")[0].pause();
+					$("#bofang").addClass('zanting');
+					
+				}else if(sta==0){
+						$("#au")[0].play();
+						sta=1;
+					$("#bofang").removeClass('zanting');
+					}
+				})
+				</script>
+			
+			
+	</body>
+
+</html>

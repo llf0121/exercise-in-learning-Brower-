@@ -1,0 +1,103 @@
+/*头部开始*/
+#header{
+	height: 40px;
+	margin: 0px auto;
+	padding-top: 5px;
+	border-bottom:1px solid #cdcdcd ;
+}
+#header span{
+	display: block;
+	height: 26px;
+	float: left;
+	margin-right:16px;
+}
+#header span.logo{
+	margin-left:135px;
+}
+#header span.sort{
+	font-size:12px ;
+	color:#808080;
+}
+#header span.sort a{
+	font-size:12px ;
+	color:#808080 ;
+	text-decoration: none;
+	line-height: 26px;
+}
+#header span.sort a:hover{
+	color: red;
+	text-decoration: underline;
+}
+#header #header-right{
+	margin-left:650px ;
+	padding: 0px;
+}
+#header #header-right p{
+	margin-top:0px ;
+	float: left;
+	margin-right: 67px;
+}
+#header #header-right form select,input{
+	font-size: 12px;
+	color: #bcbcbc;
+	text-align: center;
+	line-height: 24px;
+}
+#header #header-right form select{
+	margin-right: 22px;
+	width: 55px;
+	height: 24px;
+}
+#header #header-right form input{
+	width: 180px;
+	height: 24px;	
+}
+/*头部结束*/
+/*正文开始*/
+#content{
+	width:640px;
+	margin-left:135px ;
+}
+ #content-header{
+	width: 640px;
+	height: 100px;
+	border-bottom:1px solid #cdcdcd  ;
+}
+#content-header h1{
+	font:bold 24px "宋体";
+	color: #2b2b2b;
+	letter-spacing: -1.5px;
+}
+#content-footer{
+	width:200px ;
+}
+#content-footer span{
+	display: block;
+	font-size:12px;
+	color:#999;
+	margin-bottom: 5px;
+	float: left;
+}
+#content-footer span a{
+	font-size:12px;
+	color:#999;
+	text-decoration: none;
+}
+#content-mid p,span{
+	text-indent: 2em;
+	font-size:14px ;
+	text-align:justify ;
+	margin-bottom: 25px;
+	color:#2b2b2b;
+	line-height: 24px;
+	margin-left:auto;
+}
+#content-mid span{
+	display: block;
+	margin:0px auto;
+	width: 150px;
+}
+#content-mid p.pic{
+	text-align:center;
+}
+/*正文结束*/

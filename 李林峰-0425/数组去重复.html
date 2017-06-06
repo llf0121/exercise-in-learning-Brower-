@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重</title>
+		<script>
+			var brr = ['a','b','c','a','a','a','a','a','a','a','d','e','c','f','d'];
+			
+				function sort(arr){
+					for(j=0;j<arr.length;j++){
+						for(var i=0;i<arr.length;i++){
+							if(arr[i]>arr[i+1]){
+								var x=arr[i];
+								arr[i]=arr[i+1];
+								arr[i+1]=x;	
+							}
+						}
+					}
+					return arr;
+				}
+				
+				function qcf(arr){
+					for( var i=0;i<arr.length;i++){
+						for (var j=0;j<arr.length;j++){
+							if(arr[j]==arr[j+1]){
+							 	arr.splice(j+1,1);
+							}
+						}
+					}
+					return arr;
+				}	
+			 var re=sort(brr);
+			 var qc=qcf(re);
+			document.write(qc);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

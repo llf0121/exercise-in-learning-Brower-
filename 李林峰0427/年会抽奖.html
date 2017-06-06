@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		input{	
+				display: block;
+				margin:40px auto;
+		}
+		img{
+			  display: block;
+			  margin: 20px auto;	
+		}
+		</style>
+		<script>
+			
+			window.onload=function(){
+				//定义一个数组存放图片的地址
+			var add=['images/xiexiehuigu.jpg','images/angelababy.jpg','images/bujiadi.jpg','images/liudehua.jpg','images/liuyifei.jpg',
+					'images/meinv2.jpg','images/qian.jpg','images/quanzhilong.jpeg','images/youting.jpg','images/zhishengji.jpg'];
+				//	抓取用到的元素
+				var btn=document.getElementById("btn");
+				var pic=document.getElementById("pic");
+				// 设置一个事件
+				//设置一个状态属性,sta为奇数的时候是开始，偶数的时候是结束；
+				var sta=0;
+				btn.onclick=function(){
+					//每点击一次，状态属性加1；	
+					sta=sta+1;
+					if(sta%2==1){
+					//	更换按钮的名称
+					btn.setAttribute('value','结束');
+					// 设置一个定时器，使得点击按钮后，每隔0.3s自动随机一张图片；
+				 		time=setInterval(function(){
+						 	//随机产生一个地址
+				  		 	var tmp=Math.floor(Math.random()*add.length);
+					 		// 设置图片的src属性为随机出来的地址
+				 			pic.setAttribute('src',add[tmp]);
+						 },300)
+					}else if(sta%2==0){
+						btn.setAttribute('value','开始');
+						clearInterval(time);
+					}
+					
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<input type="button" id="btn" value="开始" />
+		<img  id="pic" src="images/xiexiehuigu.jpg" alt="地址有误" />
+	</body>
+</html>

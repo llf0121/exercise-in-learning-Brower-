@@ -1,0 +1,28 @@
+#resume{
+	width: 1000px;
+	height: 1000px;
+	/*border: 1px solid red;*/
+	margin: 0px auto;
+	font-size:13px;
+}
+#resume table{
+	width:600px;
+	height: 800px;
+	border:2px solid;
+	margin: 0px auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+#resume table caption{
+	font-size:20px ;
+	margin: 10px auto;
+}
+#resume table tr,th,td{
+	border: 1px solid;
+}
+#resume table th{
+	background-color:#EFEFEF;
+}
+#resume table ol li{
+	text-align: left;
+}

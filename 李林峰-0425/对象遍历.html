@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+		var re = {
+		'岑炎森':{
+			age:18,
+			peoplecode:'5668888888',
+			sex:'男'
+		},
+		'赵夏':{
+			age:22,
+			peoplecode:'123456',
+			sex:'女'
+		},
+		'戴鑫':{
+			age:66,
+			peoplecode:'9999999',
+			sex:'女'
+		},
+		'吕辉':{
+			age:16,
+			peoplecode:'777777',
+			sex:'男'
+		}
+	}
+		for(x in re){
+			document.write("名字    "+x);
+			for (y in re[x]){
+				document.write(y+'=>'+re[x][y]+'      ');
+			};
+			document.write("<br/>")
+		}
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

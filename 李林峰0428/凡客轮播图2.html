@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<style>
+			#box{
+				width:1200px ;
+				height:576px;
+				position: relative;
+				margin:200px auto;
+			}
+			#box a{
+				display: none;
+				position:absolute;
+				left: 0px;
+				top:0px;
+			}
+			#box a img{
+				width: 1200px;
+				height: 576px;
+			}
+			#box span {
+				display: block;
+				position: absolute;
+				left:448px;
+				bottom:24px;
+				
+			}
+			#box span i{
+				font-size: 13px;
+				color: #DDDDDD;
+				text-align: center;
+				margin: 0px 2px;
+				line-height: 13px;
+				float: left;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+								
+			//抓取要用的元素
+			var alink=document.getElementsByTagName('a');
+			var doc=document.getElementsByTagName('i');
+			
+			//设置总体变量
+			var c=0;
+			
+			//设置定时器
+			
+			function foo(){
+					c++;
+				//判断如果c==10了，让c==0;
+				c=c==10?0:c;
+				//让所有图片全部隐藏，所有圆点变灰
+				for(var i=0;i<10;i++){
+					alink[i].style.display='none';
+					doc[i].style.color='#DDDDDD';
+				}
+				//让c号图片显示
+				alink[c].style.display='block';
+				//让c号圆点变红
+				doc[c].style.color='#A10000';	
+			}
+			var time=setInterval(foo,2000);
+			
+			//给小圆点加入鼠标移入,移出事件
+			for(var i=0;i<doc.length;i++){
+				(function(a){
+					//移入事件
+					doc[a].onmousemove=function(){
+						clearInterval(time);
+						for(var j=0;j<doc.length;j++){
+							alink[j].style.display='none';
+							doc[j].style.color='#DDDDDD';
+						}
+						alink[a].style.display='block';
+						doc[a].style.color='#A10000';
+					};
+					//移除事件
+					doc[a].onmouseout=function(){
+						c=a;
+						time=setInterval(foo,2000);
+					};
+				})(i);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<a href="" style="display: block;"><img src="img/1200-576.jpg" alt="" /></a>
+			<a href=""><img src="img/576-0426.jpg" alt="" /></a>
+			<a href=""><img src="img/dz.jpg" alt="" /></a>
+			<a href=""><img src="img/dzcs411_02.jpg" alt="" /></a>
+			<a href=""><img src="img/jgwsj.jpg" alt="" /></a>
+			<a href=""><img src="img/jy_01.jpg" alt="" /></a>
+			<a href=""><img src="img/njf.jpg" alt="" /></a>
+			<a href=""><img src="img/ttt.jpg" alt="" /></a>
+			<a href=""><img src="img/xzzt-576.jpg" alt="" /></a>
+			<a href=""><img src="img/zt.jpg" alt="" /></a>
+			<span>
+				<i class="iconfont icon-lunbotu" style="color:#A10000 ;"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打蚊子</title>
+		<style>
+			#box{
+				width: 361px;
+				height: 257px;
+				position: absolute;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+			//获得可视区域的大小
+				var max_left=document.documentElement.clientWidth-361;
+				var max_top=document.documentElement.clientHeight-257;	
+			//设定鼠标移入事件，让鼠标移入时，随机变化蚊子的位置
+				box.onmousemove=function(e){
+					//设置图片位置
+					var new_left=Math.floor(Math.random()*(max_left+1));
+					var new_top=Math.floor(Math.random()*(max_top+1));
+					box.style.left=new_left+'px';
+					box.style.top=new_top+'px';	
+				}	
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/wenzi.jpg" alt="" />
+		</div>
+	</body>
+</html>

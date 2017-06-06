@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="bc.css" />
+		<script src="zepto.min.js"></script>
+		<script src="flexible.js"></script>
+		<script src="flexible_css.js"></script>
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	
+		<script type="text/javascript">
+//				初始化色块儿
+				for(var i=0;i<5;i++){
+					var ra=Math.floor(Math.random()*(3+1-0)+0);
+					$("#box  ul").eq(i).find('li').eq(ra).addClass('black');
+				}
+				
+//				给色块儿加单击事件
+
+				$("#box").on('click',"ul li",function(){
+//					获得当前所点击的ul的序号
+//					var in_u=$(this).parent().index();
+//					alert(in_u);
+////					判断点击的是否为第五行
+//					if(in_u!=4){
+//						return;
+//					}
+					//如果是第五行，继续执行
+					var in_l=$(this).index();
+//					alert($(this).parent().index())
+//					判断此时第五行里class为黑色的li的序号
+
+					var in_b=$("#box ul").last().find('li.black').index();
+					//判断所点击的li的序号是否正确
+					
+					if(in_l==in_b){
+						$("#box ul").eq(4).remove();
+						$("#box").prepend('<ul><li></li><li></li><li></li><li></li></ul>');
+						var ra=Math.floor(Math.random()*(3+1-0)+0);
+						$("#box  ul").first().find('li').eq(ra).addClass('black');
+//						alert($("#box  ul").first().next().index());
+					}else{
+						alert('真可惜，点错了')
+					}
+		
+				})
+				
+		</script>
+		
+		
+	</body>
+</html>

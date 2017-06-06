@@ -1,0 +1,109 @@
+
+body{
+	font-family: "\5B8B\4F53", sans-serif;
+}
+/*头部开始*/
+
+article{
+	width:960px;
+	height: 1200px;
+	margin: 0px auto;
+	border: 1px solid  red;
+}
+article header span.logo{
+	float: left;
+	margin-top: 10px;
+	margin-right:55px ;
+}
+article header span.block ul{
+	width:150px ;
+	float: left;
+	margin-top:15px;
+	padding: 0px;
+	border-right: 1px dashed #cdcdcd;
+}
+article header span.block #only{
+	border-right: none;
+}
+article header span.block ul li{
+	float:left;
+	width: 47px;
+	height: 16px;
+	list-style: none;
+	text-align: center;
+}
+article header span.block ul li a{
+	text-decoration: none;
+	font-size:12px ;
+	color: #333;
+	line-height:16px ;
+}
+article header span.block ul li a.spe{
+	color: #333;
+}
+/*头部结束*/
+/*文章开始*/
+section{
+	width: 640px;
+	height: 105px;
+	border-bottom: 1px dashed #cdcdcd;
+}
+section span{
+	margin-top: 10px;
+	display: block;
+	float: left;
+	margin-bottom: 0px;
+	font-size: 12px;
+	color: #666;
+}
+section span a{
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+}
+section h1{
+	float: left;
+	font-size: 23px;
+	letter-spacing: 0.5px;
+	margin-top: 10px;
+	margin-bottom:15px;
+	line-height: 30px;
+}
+section span.mes{
+	margin-top:0px;
+	padding-right: 15px;
+	line-height: 20px;
+}
+section p.tip{
+	height:70px;
+	border-bottom: 1px dashed #cdcdcd;
+	float: left;
+	font-size: 14px;
+	color: #333;
+	text-indent: 2em;
+	line-height: 30px;
+}
+section p.img{
+	text-align: center;
+	padding-bottom:0px ;
+	font-size: 12px;
+}
+section p.img a:hover{
+	text-decoration: underline;
+}
+section p.tail{
+	width:640px;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 0px;
+	
+}
+section p{
+	float: left;
+	font-size: 16px;
+	padding-bottom: 15px;
+	color: #000;
+	text-indent: 2em;
+	line-height: 30px;
+}
+/*文章结束*/

@@ -1,0 +1,383 @@
+/*共有样式开始*/
+
+.swiper-slide .love{
+	width: 100%;
+	height: 9%;
+	position: absolute;
+	top:-4%;
+	left: 0%;
+	background: rgba(221,86,124,0.4);;
+	font-size: 7vw;
+	line-height:17vw;
+	text-align:center;
+	color:white;
+	font-family: ;
+}
+
+ #bofang{
+	position: fixed;
+	display:block;
+	width: 13%;
+	top: 1%;
+	right: 2%;
+	animation: zhuan 5s linear infinite;
+	z-index: 90;
+}
+@keyframes zhuan{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+#bofang.zanting{
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+/*共有样式结束*/
+
+/*第一屏开始*/
+.one{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #F49E9E;
+}
+.one img:nth-child(1){
+	width:75%;
+	display: block;
+	position: absolute;
+	top: 9%;
+	left: 12%;
+	z-index: 5;
+}
+.one img:nth-child(2){
+	width:53%;
+	display: block;
+	position: absolute;
+	top: 20%;
+	left: 24%;
+	z-index: 5;
+}
+.one img:nth-child(3){
+	width:43%;
+	display: block;
+	position: absolute;
+	top:32%;
+	left: 28%;
+	z-index: 0;
+}
+.one p{
+	width: 60%;
+	height: 6%;
+	background: #F2C7C7;
+	text-align: center;
+	font-size: 5vw;
+	position: fixed;
+	bottom: 6%;
+	left: 18%;
+	color:#EC7C7C;
+	line-height: 10vw;
+	}
+
+/*第一屏结束*/
+
+/*第二屏开始*/
+.two{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.two img:nth-child(1){
+	width:100%;
+	display: block;
+	position: absolute;
+	top: 9%;
+	left: 0px;
+}
+.two img:nth-child(2){
+	width:58%;
+	display: block;
+	position: absolute;
+	top: 48%;
+	left: 22%;
+}
+.two img:nth-child(3){
+	width:35%;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 34%;
+}
+.two img:nth-child(4){
+	width:60%;
+	display: block;
+	position: absolute;
+	top: 38%;
+	left: 20%;
+}
+.two p:nth-of-type(1){
+		height: 5vw;
+		width: 4vw;
+		text-align: center;
+		line-height: 5vw;
+		font-size: 5vw;
+		position: absolute;
+		top: 56%;
+		left:47%;
+		color: #8B3621;
+}
+.two p:nth-of-type(2){
+		height: 5vw;
+		width: 20vw;
+		text-align: center;
+		line-height: 5vw;
+		font-size: 5vw;
+		position: absolute;
+		top: 60%;
+		left:42%;
+		color: #8B3621;
+}
+/*第二屏结束*/
+
+/*第三屏开始*/
+.three{
+	background: #50C1E9;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.three img:nth-of-type(1){
+	width: 60%;
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 16%;
+}
+.three img:nth-of-type(2){
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 9%;
+	left: 0;
+}
+.three img:nth-of-type(3){
+	width: 45%;
+	display: block;
+	position: absolute;
+	top: 73%;
+	left: 0;
+}
+.three img:nth-of-type(4){
+	width: 34%;
+	display: block;
+	position: absolute;
+	top: 82%;
+	left: 62%;
+}
+.three p{
+	width: 34%;
+	height: 3%;
+	position: absolute;
+	top: 11%;
+	left: 14%;
+	color: #8D3E2E;
+	line-height: 10vw;
+	font-size: 6vw;
+}
+/*第三屏结束*/
+
+
+/*第四屏开始*/
+.four{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.four img:nth-of-type(1){
+	display: block;
+	width:100%;
+	height: 80%;
+	position: absolute;
+	top:9% ;
+	left: 0;
+}
+.four img:nth-of-type(2){
+	display: block;
+	width:100%;
+	height: 80%;
+	position: absolute;
+	top:9% ;
+	left: 0;
+}
+.four img:nth-of-type(3){
+	display: block;
+	width:70%;
+	position: absolute;
+	top:12% ;
+	left:19%;
+}
+.four img:nth-of-type(4){
+	display: block;
+	width:58%;
+	position: absolute;
+	top:36% ;
+	left:26%;
+}
+.four p{
+	width: 47%;
+	height: 3%;
+	position: absolute;
+	top: 22%;
+	left:35%;
+	color: #8D3E2E;
+	line-height: 10vw;
+	font-size: 5vw;
+}
+/*第四屏结束*/
+
+/*第五屏开始*/
+.five{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.five img:nth-of-type(1){
+	display: block;
+	width:100%;
+	height: 80%;
+	position: absolute;
+	top:9% ;
+	left: 0;
+}
+.five img:nth-of-type(2){
+	display: block;
+	width:64%;
+	position: absolute;
+	top:28% ;
+	left: 21%;
+}
+.five img:nth-of-type(3){
+	display: block;
+	width:25%;
+	position: absolute;
+	top:9% ;
+	right: 0%;
+}
+.five img:nth-of-type(4){
+	display: block;
+	width:49%;
+	position: absolute;
+	top:85% ;
+	right: 0%;
+}
+.five img:nth-of-type(5){
+	display: block;
+	width:35%;
+	position: absolute;
+	top:65% ;
+	left: 0%;
+}
+.five p{
+	width: 9%;
+	height: 27%;
+	position: absolute;
+	top: 15%;
+	left:87%;
+	color: #8D3E2E;
+	line-height: 6vw;
+	font-size: 5vw;
+}
+
+/*第五屏结束*/
+
+/*第六屏开始*/
+.six{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.six img:nth-of-type(1){
+	display: block;
+	width:100%;
+	height:36%;
+	position: absolute;
+	top:9% ;
+	left: 0;
+}
+.six img:nth-of-type(2){
+	display: block;
+	width:100%;
+	height: 35%;
+	position: absolute;
+	top:65% ;
+	left: 0%;
+}
+.six img:nth-of-type(3){
+	display: block;
+	width:53%;
+	position: absolute;
+	top:45% ;
+	left:47%;
+}
+
+.six img:nth-of-type(4){
+	display: block;
+	width:11%;
+	position: absolute;
+	top:50% ;
+	right: 72%;
+}
+.six img:nth-of-type(5){
+	display: block;
+	width:44%;
+	position: absolute;
+	top:42% ;
+	right: 56%;
+}
+.six img:nth-of-type(6){
+	display: block;
+	width:44%;
+	position: absolute;
+	top:60% ;
+	right: 57%;
+}
+/*第六屏结束*/
+
+/*第七屏开始*/
+.seven{
+	width: 100%;
+	height: 100%;
+	background: #FFDDD4;
+	position: relative;
+}
+.seven img:nth-child(1){
+	width: 63%;
+	display: block;
+	position: absolute;
+	left: 0%;
+	top: 9%;
+}
+.seven img:nth-child(2){
+	width: 78%;
+	display: block;
+	position: absolute;
+	left:15%;
+	top: 32%;
+}
+.seven img:nth-child(3){
+	width: 91%;
+	display: block;
+	position: absolute;
+	left:1%;
+	top: 52%;
+}
+.seven p{
+		width: 22%;
+		height: 3%;
+		font-size: 7vw;
+		line-height: 1vw;
+		color: #8D3E2E;
+		position: absolute;
+		top: 16%;
+		left: 28%;
+}
+/*第七屏结束*/

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>最长字数子</title>
+		<script type="text/javascript">
+			var arr=[['苹果','梨','香蕉','火龙果'],['太阳','月亮','火星'],[1,2,3,4,5,6,6]]
+			function zuiChang(arr){
+				var a=arr[0].length;
+				for(i=0;i<arr.length;i++){
+					if(arr[i].length>=a){
+						var	max=i;
+					}
+				}
+				return max;
+			}
+			alert('这个数组中子数组长度最大的'+ '子数组是：'+zuiChang(arr)+'子数组');
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

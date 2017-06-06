@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加速跑</title>
+		<script>
+			window.onload=function(){							//让页面加载完成后再执行脚本;
+				var btn=document.getElementById("btn");			//抓取元素 button;
+				var pic=document.getElementById("pic");			//抓取元素img.pic;
+				 
+				 var i;											//设置新变量用来加速
+				 
+				 function foo(){								//设置事件对应的函数
+				 	++i;
+				 	var old=pic.style.right;					//将旧的right值赋给old;
+				 	var ne=parseInt(old)+1*i;					//让old每次加10，并赋给ne;
+				 	pic.style.right=ne+'px';					//将ne的值赋给pic;
+				 }
+				
+				 btn.onclick=function(){
+				 	i=1;										//设置初始变量；
+				 	setInterval(foo,20);						//设置计时器；
+				 }
+
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn"  value="开始跑"/>
+		<img id="pic" src="img/u=2919045841,1965899781&fm=23&gp=0.jpg.gif"  style="position: absolute; right:100px;top: 200px;"/>
+		<img src="img/index.jpg"  style="position: absolute; right:1600px;top: 200px;" />
+	</body>
+</html>

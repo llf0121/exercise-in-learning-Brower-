@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<style>
+			#box{
+				width:1200px ;
+				height:576px;
+				position: relative;
+				margin:200px auto;
+			}
+			#box a{
+				display: none;
+				position:absolute;
+				left: 0px;
+				top:0px;
+			}
+			#box a img{
+				width: 1200px;
+				height: 576px;
+			}
+			#box span {
+				display: block;
+				position: absolute;
+				left:448px;
+				bottom:24px;
+				
+			}
+			#box span i{
+				font-size: 13px;
+				color: #DDDDDD;
+				text-align: center;
+				margin: 0px 2px;
+				line-height: 13px;
+				float: left;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+			//抓取要用的元素
+			var alink=document.getElementsByTagName('a');
+			var doc=document.getElementsByTagName('i');
+			var i=0;
+			//设置定时器,每隔1秒中切换一张图片
+			setInterval(function(){
+			//每过一秒钟，显示一张图片，同时使前一张图片的display为隐藏；
+				if(i==0){
+				alink[9].style.display='none';
+				doc[9].style.color='#DDDDDD';
+				}else{
+					alink[i-1].style.display='none';
+					doc[i-1].style.color='#DDDDDD';
+				}
+				if(i==9){
+					//当显示到最后一张时，使下标再次从0开始循环
+					alink[i].style.display='block';
+					doc[i].style.color='#A10000';
+					i=0;
+				}else{
+					alink[i].style.display='block';
+					doc[i].style.color='#A10000';
+					i++;
+				}
+			},1000)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<a href="" style="display: block;"><img src="img/1200-576.jpg" alt="" /></a>
+			<a href=""><img src="img/576-0426.jpg" alt="" /></a>
+			<a href=""><img src="img/dz.jpg" alt="" /></a>
+			<a href=""><img src="img/dzcs411_02.jpg" alt="" /></a>
+			<a href=""><img src="img/jgwsj.jpg" alt="" /></a>
+			<a href=""><img src="img/jy_01.jpg" alt="" /></a>
+			<a href=""><img src="img/njf.jpg" alt="" /></a>
+			<a href=""><img src="img/ttt.jpg" alt="" /></a>
+			<a href=""><img src="img/xzzt-576.jpg" alt="" /></a>
+			<a href=""><img src="img/zt.jpg" alt="" /></a>
+			<span>
+				<i class="iconfont icon-lunbotu" style="color:#A10000 ;"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+				<i class="iconfont icon-lunbotu"></i>
+			</span>
+		</div>
+	</body>
+</html>

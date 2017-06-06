@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#pic {
+				position: fixed;
+			}
+			#pic #btn{
+				position: absolute;
+				bottom: 0px;
+				top:0px;
+				display: block;
+				width: 50px;
+				height: 50px;
+				font-size: 12px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				//抓取元素
+				var pic=document.getElementById("pic");
+				var btn=document.getElementById("btn");
+				//获得可视区域宽高
+				var win_l=document.documentElement.clientWidth;
+				var win_t=document.documentElement.clientHeight;
+				//可到达的最大宽高
+				var max_l=win_l-pic.offsetWidth;
+				var max_t=win_t-pic.offsetHeight;
+				
+				//声明左右增加激励的速度a,上下增加距离的速度b
+				var a=5; 
+//				var b=10;
+				//设定定时器执行函数
+				function foo(){
+					console.log(max_l);
+				//获取当前左右侧位置
+					var old_left=pic.offsetLeft;
+					//设置左右侧增加速度
+					var ne_left=old_left+a;
+					if(ne_left>max_l){
+						ne_left=max_l;
+					};
+					if(ne_left<0){
+						ne_left=0;
+					};
+					pic.style.left=ne_left+'px';
+					var x=pic.style.left;
+					//获得上下位置
+					var old_top=pic.offsetTop;
+					
+					//设置上下增加速度
+					var ne_top=old_top+b;
+					if(ne_top>max_t){
+						ne_top=max_t;
+					};
+					if(ne_top<0){
+						ne_top=0;
+					};
+					pic.style.top=+'px';
+					if(ne_left==0){
+						a=5;
+					};
+					if(ne_left==max_l){
+						a=-5;
+					};
+					if(ne_top==0){
+						b=10;
+					};
+					if(ne_top==max_t){
+						b=-10;
+					};
+				};
+				//设定定时器
+				var timer=setInterval(foo,20);
+				//设置鼠标移入事件
+				pic.onmouseover=function(){
+					clearInterval(timer);
+				};
+				//设置鼠标移出事件
+				pic.onmouseout=function(){
+					timer=setInterval(foo,20);
+				};
+				//设置单击事件		
+				btn.onclick=function(){
+					pic.style.display='none';		
+				};
+				//设定窗口变化事件
+				window.onresize=function(){
+				//获得可视区域宽高
+				 win_l=document.documentElement.clientWidth;
+				win_t=document.documentElement.clientHeight;
+				//可到达的最大宽高
+				 max_l=win_l-pic.offsetWidth;
+				console.log(max_l);
+				 max_t=win_t-pic.offsetHeight;
+				
+					
+					pic.style.left='0px';
+					pic.style.top='0px';
+					a=5;
+					b=10;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		
+		
+			<div id="pic"  style="position: absolute; left: 0px; top:100px; display: block;">
+			<img  src="ball.jpg" alt="" />
+			<input  type="button" value="X" id="btn"/>
+			</div>
+		
+	</body>
+</html>

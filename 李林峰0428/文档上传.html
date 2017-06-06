@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文档上传</title>
+		<style type="text/css">
+			#box{
+				width: 1000px;
+				height: 600px;
+				margin: 300px auto;
+				position: relative;
+				padding-top: 80px;
+			}
+			#box #btn{
+				position: absolute;
+				top: 20px;
+				left: 430px;
+				width: 100px;
+				height: 30px;
+			}
+			#box img{
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+//				抓取要用到的元素
+				var btn=document.getElementById("btn");
+				var box=document.getElementById("box");
+//				设置单击事件
+				btn.onclick=function(){
+				//创建新的节点
+				 var up=document.createElement('input');
+				 up.setAttribute('type','file');
+				 box.appendChild(up);
+				}
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div id="box">
+			<input type="button"  id="btn" value="点击添加" />
+			<img src="img/1.jpg" alt="" />
+			<img src="img/2.jpg" alt="" />
+		</div>
+	</body>
+</html>

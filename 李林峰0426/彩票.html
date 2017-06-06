@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>彩票</title>
+		<script>
+		
+													//     去重复函数
+			function qcf(arr){
+				for (var i=0;i<arr.length;i++){
+					for(var j=i+1;j<arr.length;j++){
+						 if(arr[i]==arr[j]){
+						 	arr.splice(j,1);
+						 	j=j-1;
+						 };
+					};
+				};
+				return arr;
+			};
+			
+		
+			var re;									//			声明一个变量用来接收去重复后的结果；
+			var brr=[];								//        	声明一个数组；
+			for(var i=0;i<5;i++){  					//			初始化数组，使数组长度为5；
+				num=Math.floor(Math.random()*31); 
+				brr[i]=num;
+			};	
+			
+			re=qcf(brr);							//			将brr数组去重，并赋值给re;
+			while(1){								//			对re一直重复执行下面循环；
+				if(re.length==5){					//			判断数组长度，如果去重复后的数组长度为5，则结束循环，得到结果；
+					break;							//			控制整个循环结束；
+				}else{								//			如果去重复后数组长度不够5，就继续向数组中写入元素，直到数组长度满足要求。
+					for(var j=re.length;j<5;j++){
+						re[j]=Math.floor(Math.random()*31);
+					}
+					re=qcf(brr);					//			对加入新元素后的数组再次去重复；
+				}
+			}
+		document.write('您所挑选的彩票号码为：'+re);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

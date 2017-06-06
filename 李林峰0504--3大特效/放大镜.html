@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>放大镜</title>
+		<style>
+			#left{
+				width: 350px;
+				height:449px;
+				margin: 20px 30px;
+				background: url(img/xiao.jpg);
+				position: relative;
+			}
+			#left #cover{
+				width: 350px;
+				height: 449px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			#left #select{
+				display: none;
+				width: 245px;
+				height: 245px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				background: #FFEEA7;
+				opacity: 0.7;
+			}
+			#right{
+				position: absolute;
+				left:380px;
+				top:20px;
+				overflow: hidden;
+				display: none;
+				width:560px;
+				height:560px;
+			}
+			#right img{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+	//				抓取元素
+				var cover=document.getElementById("cover");
+				var se=document.getElementById("select");
+				var pic=document.getElementById("pic");
+				var right=document.getElementById("right");
+				
+	//			设置鼠标移动事件
+				cover.onmousemove=function(e){
+	//			获取事件对象
+					var ev=window.event || e;
+		//			获得鼠标距离事件源的位置			}
+					var left=ev.offsetX||ev.layerX;
+					var top=ev.offsetY||ev.layerY;
+		//			设置选中色块的位置
+		            var se_left=left-se.offsetWidth/2;
+		            var se_top=top-se.offsetHeight/2;
+		            
+		//          赋值回去之前进行边界判断
+					if(se_left<0){
+						se_left=0;
+					}
+					if(se_top<0){
+						se_top=0;
+					}
+					if(se_left>(cover.offsetWidth-se.offsetWidth)){
+						se_left=(cover.offsetWidth-se.offsetWidth);
+					}
+					if(se_top>(cover.offsetHeight-se.offsetHeight)){
+						se_top=(cover.offsetHeight-se.offsetHeight);
+					}
+						
+		//          将值赋值回去
+					se.style.left=se_left+'px';
+					se.style.top=se_top+'px';
+//	            	设置右边图片的位置
+					var r_left=se_left*(right.offsetWidth-pic.offsetWidth)/(cover.offsetWidth-se.offsetWidth);
+					var r_top=se_top*(right.offsetHeight-pic.offsetHeight)/(cover.offsetHeight-se.offsetHeight);
+					pic.style.left=r_left+'px';
+					pic.style.top=r_top+'px';
+				}
+				
+				//设置鼠标移入事件
+				cover.onmouseover=function(){
+					se.style.display='block';
+					right.style.display='block';
+				}
+				//设置鼠标移出事件
+				cover.onmouseout=function(){
+					se.style.display='none';
+					right.style.display='none';
+				}
+				
+			}	
+		</script>
+	</head>
+	<body>
+		<div id="left">
+			<div id="select"></div>
+			<div id="cover"></div>
+		</div>
+		<div id="right">
+			<img  id='pic' src="img/da.jpg" alt="" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.min.js"></script>
+	</head>
+	<body  ng-app='app'   ng-controller='ctrl'>
+		<script type="text/javascript">
+//			创建模块儿
+		var app=angular.module('app',[]);
+//		创建控制器
+      app.controller('ctrl',['$scope',function($scope){
+      	
+      	$scope.list=[
+				      	{
+				      		title:'js好学嘛？',
+				      		type:'checkbox',
+				      		answer:[
+				      					{cont:'比较难'},
+				      					{cont:'难'},
+				      					{cont:'不难'},
+				      					{cont:'非常简单'}
+				      				]
+				      	},
+				      	{
+				      		title:'angular是什么？',
+				      		type:'radio',
+				      		answer:[
+				      					{cont:'js框架'},
+				      					{cont:'php框架'},
+				      					{cont:'css特性'},
+				      					{cont:'html5内容'}
+				      				]
+				      	}
+      	]
+      	
+      	
+      	
+      	
+      }])
+		</script>
+		
+		
+		
+		<div ng-repeat='x in list'>
+			<h2> {{x.title}}</h2>
+			<ul>
+				<li  ng-repeat='v in x.answer'> {{x.answer[v].cont}}</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

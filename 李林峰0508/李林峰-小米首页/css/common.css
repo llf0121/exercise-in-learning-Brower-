@@ -1,0 +1,60 @@
+/*通用样式*/
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+h2{
+	font-size: 22px;
+	color: #333;
+	font-weight: 200;
+	margin-top: 46px;
+	margin-bottom: 18px;
+}
+ .box{
+	width: 235px;
+	height: 339px;
+	float: left;
+	margin-right:10px;
+	margin-bottom: 40px;
+	background: #FAFAFA;
+}
+ .box>a{
+	display: block;
+	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+.box a img{
+	width: 160px;
+	height: 160px;
+}
+ .box span{
+	display: block;
+	text-align: center;
+}
+.box span.name{
+	display: block;
+	font-size: 14px;
+	color: #212121;
+	font-weight: 400;
+	margin-bottom: 16px;	
+}
+.box span.name a{
+	display: block;
+	width: 15em;
+	white-space:nowrap; 
+	text-overflow: ellipsis;
+	overflow:hidden;
+	margin: 0px auto;
+}
+ .box span.description{
+	font-size: 12px;
+	color: #b0b0b0;	
+	margin-bottom: 15px;
+}
+ .box span.price{
+	font-size: 14px;
+	color: #ff6709;	
+}
+/*通用样式结束*/

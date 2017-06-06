@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义计算器</title>
+		<script type="text/javascript">
+			var a=prompt('请输入第一个数字');
+			var b=prompt('请输入计算符号');
+			var c=prompt('请输入第二个数字');
+			var re;
+			switch(b){
+				case '+':
+					   re=Number(a)+Number(c);
+						break;
+				case '-':
+						re=a-c;
+						break;
+				case '*':
+						re=a*c;
+						break;
+				case '/':
+						re=a/c;
+						break;
+				case '%':
+						re=a%c;
+						break;
+			}
+			alert(re);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>漂浮特效</title>
+		<style type="text/css">
+			#box {
+				position: absolute;
+				background: red;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				
+					
+					//获得可视区域宽高
+					var kd=document.documentElement.clientWidth;
+					var gd=document.documentElement.clientHeight;
+					
+					//抓取元素
+					var box=document.getElementById("box");
+		//			获取box自身宽高
+		            var box_w=box.offsetWidth;
+		            var box_h=box.offsetHeight;
+					
+				
+					
+					//设置运动速度
+					var a=5;
+					var b=10;
+					//设置定时器
+					setInterval(function(){
+							//获取当前位置
+//						var old_left=box.style.left;
+						var old_left=box.offsetLeft;
+//						var old_top=box.style.top;
+						var old_top=box.offsetTop;
+						//设置新的位置
+						var new_left=parseInt(old_left)+a;
+//						alert(new_left);
+						var new_top=parseInt(old_top)+b;
+						
+						//判断新位置是否超出边界
+						if(new_left>=(kd-box_w)){
+							new_left=(kd-box_w);
+							a=-5;
+						}
+						if(new_left<=0){
+							new_left=0;
+							a=5;
+						}
+						if(new_top>=(gd-box_h)){
+							new_top=(gd-box_h);
+							b=-10;
+						}
+						if(new_top<=0){
+							new_top=0;
+							b=10;
+						}
+						
+						//将新位置赋值回去
+						
+						box.style.left=new_left+'px';
+						box.style.top=new_top+'px';
+						
+						
+						//设置窗口变化事件
+						window.onresize=function(){
+//							获取当前窗口的大小
+							kd=document.documentElement.clientWidth;
+						    gd=document.documentElement.clientHeight;
+						    
+						    //获取当前位置
+						}
+					},10);
+		}			
+		</script>
+	</head>
+	<body>
+		<div id='box' style="left:0px;top:0px;">
+			<img src="img/dan.gif" alt="" />
+		</div>
+	</body>
+</html>
