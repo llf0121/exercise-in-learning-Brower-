@@ -1,0 +1,219 @@
+@CHARSET "UTF-8";
+/********************* 表单类样式  **********************/
+*{
+	padding:0;
+	margin:0;
+}
+#form-style1{
+	width:90%;
+	height:auto;
+	padding:15px;
+}
+#form-style1 .error{
+	width:auto;
+	height:auto;
+	padding:0px 15px;
+	line-height:30px;
+	margin:10px 0px;
+	border:1px solid #ff8080;
+	color:#333;
+	box-shadow:0px 0px 3px #ff8080;
+	border-radius:5px;
+	font-size:14px;
+	text-shadow:0px 1px 0px #ddd;
+	display:none;
+}
+#form-style1 .error span{
+	margin:0px 5px;
+}
+#form-style1 dl{
+	width:100%;
+	height:auto;
+	float:left;
+	padding:10px 0px;
+	border-bottom:1px solid #ddd;
+}
+#form-style1 dl dt{
+	width:20%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-shadow:0px 1px 0px #ddd;
+	color:#333;
+	float:left;
+	text-align:right;
+}
+#form-style1 dl dd{
+	width:60%;
+	height:auto;
+	float:left;
+}
+#form-style1 dl dd label{
+	margin-top:7px;
+	margin-right:10px;
+	float:left;
+}
+#form-style1 dl dd label input{
+	margin-left:5px;
+	margin-top:-5px;
+}
+#form-style1 dl dd .textarea{
+	width:300px;
+	height:72px;
+}
+#form-style1 dl dd select{
+	width:30%;
+	margin-right:5px;
+}
+/**  表单位置限制 **/
+
+#formBox{
+	width:620px;
+	height:auto;
+	margin:30px auto;
+	border:1px solid #DDD;
+	border-radius:5px;
+	box-shadow:0px 0px 5px #ddd;
+	overflow:hidden;
+}
+
+/** 列表样式  **/
+a{
+	text-decoration:none;
+}
+.listBox{
+	width:620px;
+	height:auto;
+	border:1px solid #DDD;
+	border-radius:5px;
+	box-shadow:0px 0px 5px #ddd;
+	margin:30px auto;
+} 
+.listBox ul{
+	width:100%;
+	height:auto;
+	margin:0;
+}
+.listBox ul li{
+	list-style:none;
+	height:85px;
+	width:100%;
+	padding:10px ;
+	box-sizing: border-box;
+	position: relative;
+}
+.listBox ul li h2{
+	width:450px;
+	height:20px;
+	position: absolute;
+	right:72px;
+	top:10px;
+}
+.listBox ul li h2 .link{
+	color:#333;
+	-moz-transition:1s color,1s text-shadow;
+	-webkit-transition:1s color,1s text-shadow;
+	-o-transition:1s color,1s text-shadow;
+	font-size:20px;
+	line-height: 20px;
+	position: absolute;
+}
+.listBox ul li h2 .link:hover{
+	color:#33b4b7;
+	text-shadow:0px 1px 0px #ddd;
+	text-decoration:none;
+}
+.listBox ul li img{
+	height:60px;
+	width:60px;
+	border-radius: 30px;
+	position: absolute;
+}
+.listBox ul li>p{
+	text-indent: 2em;
+	width:410px;
+	height:30px;
+	font-size: 14px;
+	line-height: 30px;
+	position: absolute;
+	left:82px;
+	top:34px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.listBox ul li>a{
+	position: absolute;
+	width:40px;
+	height:20px;
+	border-radius:10px ;
+	border: 1px solid grey;
+	text-align: center;
+	line-height: 20px;
+	color: #000;
+	font-size: 12px;
+}
+.listBox ul li>a:nth-of-type(1){
+	right:70px;
+	top:41px;
+}
+.listBox ul li>a:nth-of-type(2){
+	right:20px;
+	top:41px;
+}
+
+.listBox ul li .fnBtn{
+	width:30px;
+}
+
+/** 显示文章 **/
+.article{
+	width:420px;
+	height:auto;
+	padding:30px;
+	border:1px solid #DDD;
+	border-radius:5px;
+	box-shadow:0px 0px 5px #ddd;
+	margin:30px auto;
+}
+.article h3{
+	width:100%;
+	height:36px;
+	font-size:18px;
+	line-height:36px;
+	text-align:center;
+}
+.article .time{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	text-indent:18px;
+}
+.article .time em{
+	color:#666;
+}
+.article .content{
+	font-size:12px;
+	text-indent:18px;
+	line-height:24px;
+}
+.page{
+	width:600px;
+	margin:0px auto;
+}
+.page li{
+	margin-right:10px;
+	list-style: none;
+}
+.page li a{
+	display: block;
+	width:100px;
+	height:24px;
+	margin: 0 auto;
+	text-align: center;
+	line-height:24px ;
+	font-size: 14px;
+	border-radius:12px;
+	box-shadow: 0 0 5px grey;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>文章列表</title>
+<script src="template/bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<link href="template/css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="listBox">
+	<ul>
+		<?php
+//从数据库获得数据，并进行遍历输出s
+ $data=include 'libs/article_database.php';
+foreach($data as $k=>$v){
+		//组合输出
+		echo"<li>
+		<h2><a class='link' href=''>".$v['title']."</a></h2>
+		<img src=\"{$v['src']}\"/>
+		<p>".$v['content']."</p>
+		<a href='index.php?path=editShow&id={$k}'>编辑</a>
+		<a href='index.php?path=delShow&id={$k}'>删除</a>
+	</li>";
+		}
+		?>
+	</ul>
+</div>
+<div class="pagination pagination-centered">
+    <ul class="page">
+      
+        <li ><a href="index.php?path=addShow">添加文章</a></li>
+    </ul>
+</div>
+</body>
+</html>

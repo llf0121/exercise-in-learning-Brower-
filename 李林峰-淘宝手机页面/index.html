@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝</title>
+		<link rel="stylesheet" href="css/taobao.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/font/iconfont.css" />
+		<script src="js/flexible.js"></script>
+		<script src="js/flexible_css.js"></script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+	</head>
+	<body >
+		<!--顶部和最底部开始-->
+		<div id="top">
+			<img src="imgs/1.png" />
+			<div class="search">
+				寻找宝贝店铺
+			</div>
+		</div>
+		
+		<div id='bottom'>
+			<span><i class="iconfont icon-shouyeshouye"></i>首页</span>
+			<span><i class="iconfont icon-wuliu"></i>物流</span>
+			<span><i class="iconfont icon-gouwuche"></i>购物车</span>
+			<span><i class="iconfont icon-yonghuzhongxin"></i>我的淘宝</span>
+			<span><i class="iconfont icon-gengduo"></i>更多</span>
+		</div>
+		<!--顶部和最底部结束-->
+		
+		<!--轮播图开始-->
+		<div id="lunbo">
+			<!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/1.jpg" /></a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/2.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/3.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/4.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/5.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/6.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/7.jpg" /></a>
+		            </div>
+		             <div class="swiper-slide">
+		            	<a href="" ><img src="imgs/lunbo/8.jpg" /></a>
+		            </div>
+			    </div>
+			        <!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+		    </div>
+		
+		    <!-- Swiper JS -->
+		   <script src="js/swiper.min.js"> </script>
+		
+		    <!-- Initialize Swiper -->
+		    <script>
+		    var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+		        loop : true,
+		        autoplay : 4000,
+		        speed:200,
+		    });
+		    </script>
+		</div>
+		<!--轮播图结束-->
+		
+		<!--图标分类区-->
+		<div class="item">
+			<a href="">
+				<img src="imgs/fenlei/1.png" alt="" />
+				天猫
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/2.png" alt="" />
+				聚划算
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/3.png" alt="" />
+				天猫国际
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/4.png" alt="" />
+				外卖
+			</a><a href="">
+				<img src="imgs/fenlei/5.png" alt="" />
+				天猫超市
+			</a>
+		</div>
+		<!--图标分类区-->
+		<div class="item">
+			<a href="">
+				<img src="imgs/fenlei/6.png" alt="" />
+				充值中心
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/7.png" alt="" />
+				飞猪旅行
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/8.png" alt="" />
+				领金币
+			</a>
+			<a href="">
+				<img src="imgs/fenlei/8.png" alt="" />
+				拍卖
+			</a><a href="">
+				<img src="imgs/fenlei/10.png" alt="" />
+				分类
+			</a>
+		</div>
+		<!--图标分类区结束-->
+		
+		
+		<!--头条开始-->
+		<div id="toutiao">
+			<img src="imgs/toutiao.png"  />
+			<div>
+				<span>最新</span>
+				<div class="right">
+					<p style="display: block;">【试用评测】北欧创意原木日式吸顶灯</p>
+					<p>【试用评测】净痘精华霜50g</p>
+					<p>巴基斯坦总理:举国之力支持阿里来发展</p>
+					<p>辣妈何洁PK大战</p>
+				</div>
+			</div>
+		</div>
+		<script>
+//			设置大总管变量
+			var c=0;
+//			设置定时器
+			function foo(){
+				c++;
+				c=c==4?0:c;
+				$("#toutiao .right p").eq(c).show().siblings('p').hide();
+			}
+			
+			var timer=setInterval(foo,3000);
+
+		</script>	
+		<!--头条结束-->
+		
+		<!--海抢购开始-->
+		<div id="qianggou">
+			<a href=""><img src="imgs/qianggou/1.jpg" /></a>
+			<a href=""><img src="imgs/qianggou/4.jpg"  /></a>
+			<a href=""><img src="imgs/qianggou/5.png"  /></a>
+			<a href=""><img src="imgs/qianggou/2.jpg"  /></a>
+			<a href=""><img src="imgs/qianggou/3.png"  /></a>
+			<div>
+				<span class="hour">00</span>
+				<span  class="dot">:</span>
+				<span class="min">00</span>
+				<span  class="dot">:</span>
+				<span class="sec">00</span>
+			</div>
+		</div>
+		<!--海抢购结束-->
+		
+		
+		<!--超实惠开始-->
+		<div id="shihui">
+			<h2>超实惠</h2>
+			<a href=""><img src="imgs/shihui/1.jpg"  /></a>
+			<a href=""><img src="imgs/shihui/2.png"  /></a>
+			<a href=""><img src="imgs/shihui/3.png"  /></a>
+			<a href=""><img src="imgs/shihui/4.jpg"  /></a>
+			<a href=""><img src="imgs/shihui/5.png"  /></a>
+			<a href=""><img src="imgs/shihui/6.jpg"  /></a>
+			<a href=""><img src="imgs/shihui/7.jpg"  /></a>
+			<a href=""><img src="imgs/shihui/8.png"  /></a>
+		</div>
+		<!--超实惠结束-->
+		
+		<!--天猫必逛-->
+		<div id="biguang"  class="com">
+			<h2>天猫必逛</h2>
+			<a href="" class="one"><img src="imgs/biguang/1.png"  /></a>
+			<a href="" class="two"><img src="imgs/biguang/2.png""/></a>
+			<a href=""> <img src="imgs/biguang/3.png"  /></a>	
+			<a href=""> <img src="imgs/biguang/4.jpg"  /></a>	
+			<a href=""> <img src="imgs/biguang/5.jpg"  /></a>
+			<a href=""> <img src="imgs/biguang/6.jpg"  /></a>
+		</div>
+		<!--天猫必逛结束-->
+		
+		<!--特色好货-->
+		<div id="biguang"  class="com">
+			<h2>特色好货</h2>
+			<a href="" class="one"><img src="imgs/tese/1.png"  /></a>
+			<a href="" class="two"><img src="imgs/tese/2.png""/></a>
+			<a href=""> <img src="imgs/tese/3.png"  /></a>	
+			<a href=""> <img src="imgs/tese/4.png"  /></a>	
+			<a href=""> <img src="imgs/tese/5.png"  /></a>
+			<a href=""> <img src="imgs/tese/6.jpg"  /></a>
+		</div>
+		<!--特色好货结束-->
+		
+		<!--热门市场-->
+		<div id="caini"  >
+			<h2>猜你喜欢</h2>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/2.png"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/1.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/3.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/4.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/5.png"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/7.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/8.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/9.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/10.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/11.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/12.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+			<div class='box'>
+				<a href=""><img src="imgs/cani/13.jpg"/></a>
+				<p>[为你推荐]浔壹|「云雾」台湾设计师 原创设计 玻璃杯</p>
+				<span>￥29元</span>
+			</div>
+		</div>
+		<!--特色好货结束-->
+		
+		<!--底部开始-->
+		<div id="foot">
+			<div>
+				<a href="">登录</a>
+				<a href="">注册</a>
+				<a href="">电脑版</a>
+				<a href="">用户反馈</a>
+			</div>
+			<p>2016 浙 B2-20080224 <a href="">服务中心</a></p>
+		</div>
+		<!--底部结束-->
+	</body>
+</html>
