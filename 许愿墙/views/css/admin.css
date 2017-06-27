@@ -1,0 +1,105 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+a{
+    text-decoration:none;
+}
+.listBox{
+    width:620px;
+    height:auto;
+    border:1px solid #DDD;
+    border-radius:5px;
+    box-shadow:0px 0px 5px #ddd;
+    margin:30px auto;
+    padding-top: 50px;
+    position: relative;
+}
+.listBox>a{
+    position: absolute;
+    display: block;
+    width:50px;
+    height:30px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    left:30px;
+    top:10px;
+}
+.listBox ul{
+    width:100%;
+    height:auto;
+    margin:0;
+}
+.listBox ul li{
+    list-style:none;
+    height:85px;
+    width:100%;
+    padding:10px ;
+    box-sizing: border-box;
+    position: relative;
+}
+.listBox ul li h2{
+    width:100px;
+    height:20px;
+    position: absolute;
+    left:27px;
+    top:38px;
+}
+.listBox ul li h2 .link{
+    color:#333;
+    -moz-transition:1s color,1s text-shadow;
+    -webkit-transition:1s color,1s text-shadow;
+    -o-transition:1s color,1s text-shadow;
+    font-size:16px;
+    line-height: 20px;
+    position: absolute;
+}
+.listBox ul li h2 .link:hover{
+    color:#33b4b7;
+    text-shadow:0px 1px 0px #ddd;
+    text-decoration:none;
+}
+.listBox ul li img{
+    height:60px;
+    width:60px;
+    border-radius: 30px;
+    position: absolute;
+}
+.listBox ul li>p{
+    text-indent: 2em;
+    width:410px;
+    height:30px;
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    left:82px;
+    top:34px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.listBox ul li>a{
+    position: absolute;
+    width:40px;
+    height:20px;
+    border-radius:10px ;
+    border: 1px solid grey;
+    text-align: center;
+    line-height: 20px;
+    color: #000;
+    font-size: 12px;
+}
+.listBox ul li>a:nth-of-type(1){
+    right:70px;
+    top:41px;
+}
+.listBox ul li>a:nth-of-type(2){
+    right:20px;
+    top:41px;
+}
+
+.listBox ul li .fnBtn{
+    width:30px;
+}
