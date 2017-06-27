@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<link href="views/css/edit.css" rel="stylesheet">
+</head>
+<body>
+	<form action="index.php?c=article&a=edit&id=<?php echo $_GET['id']?>" method="post" >
+			<ul>
+				<li >
+					<span class="uname">用户名:</span>
+					<input type="text" name="username" value="<?php echo $data['aname']?> " class="name1">
+				</li>
+				<li >
+					<span>内容:</span>
+					<textarea style="width:100%;height:120px;" name="content"> <?php echo $data['acontent'] ?></textarea>
+				</li>
+				<li >
+					<span>发布时间 </span>
+					<span class="time"><?php echo date('y-m-d',$data['time'])?></span>
+				</li>
+				<li>
+					<input class='btn btn-info' type="submit" value="提交" id="sub">
+				</li>
+			</ul>
+	</form>
+</body>
+</html>

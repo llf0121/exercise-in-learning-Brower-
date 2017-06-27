@@ -1,0 +1,145 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    background:#AFEFFA ;
+}
+#bkg{
+    width:750px;
+    height:380px;
+    background: url("../../libs/images/11.jpg") no-repeat center center;
+    margin:200px auto;
+    box-shadow: 0 0 3px 0 grey;
+    position: relative;
+}
+#bkg .tab{
+    position: absolute;
+    right:60px;
+    top:0;
+    width:285px;
+    height:50px;
+    display: flex;
+    margin-bottom: 15px;
+}
+#bkg  .tab span{
+    display: block;
+    width:60%;
+    float: left;
+    height:70px;
+    padding:25px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+#bkg .content{
+    display: block;
+    width: 285px;
+    height:225px;
+    position: absolute;
+    right:60px;
+    top:85px;
+}
+
+
+#bkg .content #login{
+    width:100%;
+    height:280px;
+    position: relative;
+}
+#bkg .content #login span{
+    display: block;
+    font-size:14px ;
+    line-height: 20px;
+    position: absolute;
+}
+#bkg .content #login input{
+    width:100%;
+    height:38px;
+    display: block;
+    font-size:14px ;
+    line-height: 20px;
+    text-indent: 1em;
+    border:1px solid #e0e0e0;
+    border-radius: 5px;
+    background: white;
+    margin:15px 0;
+}
+#bkg .content #login input:nth-of-type(4){
+    background: #27d5bf;
+    height:54px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    letter-spacing: 10px;
+}
+#bkg .content #login input.check{
+    width:16px;
+    height:16px;
+    margin:24px 0;
+}
+#bkg .content #login span:nth-of-type(1){
+     width:67px;
+     height:20px;
+     left:20px;
+     top:115px;
+ }
+
+#bkg .content #login span:nth-of-type(2){
+     width:67px;
+     height:20px;
+     right:0;
+     top:115px;
+ }
+
+
+
+#bkg .content #reg{
+    width:100%;
+    height:280px;
+    position: relative;
+}
+#bkg .content #reg input{
+    width:100%;
+    height:38px;
+    display: block;
+    font-size:14px ;
+    line-height: 20px;
+    text-indent: 1em;
+    border:1px solid #e0e0e0;
+    border-radius: 5px;
+    background: white;
+    margin:15px 0;
+}
+#bkg .content #reg input:nth-of-type(3){
+    width:40%;
+    height:55px;
+    display: block;
+    font-size:14px ;
+    line-height: 20px;
+    text-indent: 1em;
+    border:1px solid #e0e0e0;
+    border-radius: 5px;
+    background: white;
+    margin:27px 0;
+}
+#bkg .content #reg img{
+    position: absolute;
+    display: block;
+    width:150px;
+    height:60px;
+    left:130px;
+    bottom:100px;
+}
+
+#bkg .content #reg input:nth-of-type(4){
+    background: #27d5bf;
+    height:54px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    letter-spacing: 10px;
+}
